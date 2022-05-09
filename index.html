@@ -15,22 +15,24 @@
 <body>
     <div id="root">
         <header>
-            <img src="img/Logo.png" alt="">
+            <img src="img/Logo.png" alt=" Logo Boolean">
         </header>
         <main>
             <div class="container">
-                <div id="addElement">
+                <div class="add-element">
                     <input type="text" name="newElement" id="new-element" placeholder="aggiungi un nuovo elemento alla lista" v-model="addLi">
-                    <button @click="addNewLi">Aggiungi</button>
+                    <button class="btn" @click="addNewLi">Aggiungi</button>
 
                 </div>
-                <ul>
-                    <li v-for="(element, index) in toDoArray">
-                        <span :class="element.done === true ? 'textline' : '' "> {{element.text}}
+                <div class="list-item">
+                    <ul>
+                        <li v-for="(element, index) in toDoArray">
+                            <span :class="element.done === true ? 'textline' : '' "> {{element.text}}
                         </span>
-                        <i class="fas fa-times-circle" @click="crucisClick(index)"></i>
-                    </li>
-                </ul>
+                            <i class="fas fa-times-circle" @click="crucisClick(index)"></i>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </main>
 

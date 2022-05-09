@@ -28,7 +28,7 @@
                     <li v-for="(element, index) in toDoArray">
                         <span :class="element.done === true ? 'textline' : '' "> {{element.text}}
                         </span>
-                        <i class="fas fa-times-circle" @click="remove(index)"></i>
+                        <i class="fas fa-times-circle" @click="crucisClick(index)"></i>
                     </li>
                 </ul>
             </div>

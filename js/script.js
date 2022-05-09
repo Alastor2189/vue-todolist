@@ -40,6 +40,15 @@ const app = new Vue({
     methods: {
         crucisClick: function(index) {
             this.toDoArray.splice(index, 1)
-        }
+        },
+
+        addNewLi: function() {
+            const newLi = {
+                text: this.addLi,
+                done: false
+            }
+            this.toDoArray.push(newLi)
+            this.addLi = ""
+        },
     }
 })
